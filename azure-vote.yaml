@@ -59,7 +59,8 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: azure-vote-front
-        image: mycontainerregistryjenkinskub.azurecr.io/azure-vote-front:v4
+        image: mycontainerregistryjenkinskub.azurecr.io/azure-vote-front:kube4
+        imagePullPolicy: IfNotPresent
         resources:
           requests:
             cpu: 100m
@@ -72,6 +73,8 @@ spec:
         env:
         - name: REDIS
           value: "azure-vote-back"
+      imagePullSecrets:
+      - name: acr-secret1mg
 ---
 apiVersion: v1
 kind: Service

@@ -10,7 +10,7 @@ services:
 
   azure-vote-front:
     build: ./azure-vote
-    image: azure-vote-front:v4
+    image: azure-vote-front
     container_name: azure-vote-front
     environment:
       REDIS: azure-vote-back
