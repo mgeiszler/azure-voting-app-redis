@@ -59,7 +59,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: azure-vote-front
-        image: mycontainerregistryjenkinskub.azurecr.io/azure-vote-front:kube4
+        image: mg1acr.azurecr.io/azure-vote-front:latest
         imagePullPolicy: IfNotPresent
         resources:
           requests:
